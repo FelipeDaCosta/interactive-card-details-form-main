@@ -21,13 +21,7 @@ body {
     display: none;
 }
 
-#card-form {
-    margin: auto;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
+#card-form,
 #thank-you {
     margin: auto;
     width: 100%;
@@ -48,9 +42,6 @@ body {
 
 .card-image-info {
     position: absolute;
-}
-
-#card-front p {
     color: white;
     font-size: 14px;
     letter-spacing: 1px;
@@ -78,9 +69,6 @@ body {
 #card-back-cvc {
     right: 12%;
     bottom: 41%;
-    color: white;
-    font-size: 14px;
-    letter-spacing: 1px;
 }
 
 #card-front {
@@ -124,7 +112,7 @@ body {
 
 .input-text:focus {
     border: 2px solid #876f91;
-    outline:none;
+    outline: none;
 }
 
 .invalid-fill{
