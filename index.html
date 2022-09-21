@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Karla:wght@400;700&family=Overpass:wght@400;700&family=Space+Grotesk:wght@300;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Card Details Form</title>
+
+
+</head>
+<body>
+  <div id="main">
+    <img src="./images/bg-main-desktop.png" alt="background" id="bg-image-desktop">
+    <img src="./images/bg-main-mobile.png" alt="background" id="bg-image-mobile">
+    <div class="card-image" id="card-front">
+      <img src="./images/bg-card-front.png" alt="card-front" >
+      <img src="./images/card-logo.svg" alt="logo" id="card-logo">
+      <p class="card-image-info" id="card-number">0000 0000 0000 0000</p>
+      <p class="card-image-info" id="cardholder-name">Jane Appleseed</p>
+      <p class="card-image-info" id="expdate"><span id="exp-month">00</span>/<span id="exp-year">00</span> </p>
+    </div>
+    <div class="card-image" id="card-back">
+      <img src="./images/bg-card-back.png" alt="card-back" >
+      <p class="card-image-info" id="card-back-cvc">000</p>
+    </div>
+    <div id="card-form">
+      <form action="" id="input-form-element">
+        <div class="form-input">
+          <label for="fname">CARDHOLDER NAME</label>
+          <input type="text" id="fname" placeholder="e.g. Jane Appleseed" maxlength="25" class="input-text">
+          <p class="error-element hidden" id="fname-error"></p>
+        </div>
+        <div class="form-input">
+          <label for="fnumber">CARD NUMBER</label>
+          <input type="text" id="fnumber" placeholder="e.g. 1234 5678 9123 0000" maxlength="19" class="input-text">
+          <p class="error-element hidden" id="fnumber-error"></p>
+        </div>
+        <div class="form-input" id="exp-cvc">
+          <div class="form-input-2" id="expdate">
+            <label for="fexpdate">EXP. DATE (MM/YY)</label>
+            <div id="expdateinp">
+              <input type="text" id="fexpdatemm" placeholder="MM" maxlength="2" class="input-text">
+              <input type="text" id="fexpdateyy" placeholder="YY" maxlength="2" class="input-text">
+            </div>
+            <p class="error-element hidden" id="fexpdatemmyy-error"></p>
+          </div>
+         
+          <div class="form-input-2" id="cvc">
+            <label for="fcvc">CVC</label>
+            <input type="text" id="fcvc" placeholder="e.g. 123" maxlength="3" class="input-text">
+            <p class="error-element hidden" id="fcvc-error"></p>
+          </div>
+        </div>
+        <input type="button" value="Confirm" id="submit-button" class="button">
+      </form>
+    </div>
+
+    <!--Thank you part-->
+
+    <div id="thank-you" class="hidden">
+      <div id="thank-you-content">
+        <img src="./images/icon-complete.svg" alt="check">
+        <h2>THANK YOU!</h2>
+        <p>We've added your card details</p>
+        <input type="button" value="Continue" id="continue-button" class="button">
+      </div>
+    </div>
+  </div>
+
+  
+
+
+<!--
+
+  0000 0000 0000 0000
+  Jane Appleseed
+  00/00
+
+  000
+
+  Cardholder Name
+  e.g. Jane Appleseed
+
+  Card Number
+  e.g. 1234 5678 9123 0000
+
+  Exp. Date (MM/YY)
+  MM
+  YY
+
+  CVC
+  e.g. 123
+
+  Confirm
+
+ Completed state start 
+
+  Thank you!
+  We've added your card details
+  Continue
+-->
+<script src="script.js"></script>
+</body>
+</html>

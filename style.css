@@ -1,0 +1,259 @@
+* {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+#main {
+    display: flex;
+}
+
+#bg-image-desktop {
+    height: 100vh;
+    width: 42%;
+}
+
+#bg-image-mobile {
+    width: 100vw;
+    height: 30%;
+    display: none;
+}
+
+#card-form {
+    margin: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#thank-you {
+    margin: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.card-image {
+    position: absolute;
+    width: 25%;
+    min-width: 320px;
+}
+
+.card-image img {
+    max-width:100%;
+    max-height:100%;
+}
+
+.card-image-info {
+    position: absolute;
+}
+
+#card-front p {
+    color: white;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+#card-front #card-number {
+    left: 11%;
+    bottom: 32%;
+    font-size: 23px;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+#cardholder-name {
+    left: 11%;
+    bottom: 10%;
+}
+
+#expdate {
+    bottom: 10%;
+    left: 78%;
+}
+
+#card-back-cvc {
+    right: 12%;
+    bottom: 41%;
+    color: white;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+#card-front {
+    top: 17%;
+    left: 12%;
+}
+
+#card-front #card-logo {
+    position: absolute;
+    top: 12%;
+    left: 11%;
+    width: 15%;
+}
+
+#card-back {
+    top: 52%;
+    left: 20%;
+}
+
+.form-input {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.form-input label {
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: hsl(278, 68%, 11%)
+}
+
+.input-text {
+    width: 300px;
+    padding: 10px;
+    border-radius: 6px;
+    margin-top: 5px;
+    border: 1px solid hsl(270, 3%, 87%);
+    cursor: pointer;
+}
+
+.input-text:focus {
+    border: 2px solid #876f91;
+    outline:none;
+}
+
+.invalid-fill{
+    border: 1px solid red;
+}
+
+.error-element {
+    font-size: 10px;
+    color: red;
+    margin-top: 5px;
+}
+
+#exp-cvc {
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#expdateinp {
+    flex-direction: row;
+}
+
+#expdateinp input {
+    width: 50px;
+    margin-right: 10px;
+}
+
+#cvc input {
+    width: 100px;
+}
+
+.form-input-2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.button {
+    width: 323px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: hsl(278, 68%, 11%);
+    color: white;
+    border: none;
+    font-size: 1.03rem;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+#submit-button:hover {
+    background-color: hsl(279, 6%, 55%);
+    color: black;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#thank-you-content {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#thank-you-content > h2{
+    color: hsl(278, 68%, 11%);
+    margin-bottom: 0px;
+    margin-top: 30px;
+}
+
+#thank-you-content > p{
+    color: hsl(279, 6%, 55%);
+    margin-bottom: 35px;
+}
+
+@media (max-width: 1100px) {
+    #card-form {
+        justify-content: end;
+    }
+
+}
+
+@media (max-width: 400px) {
+    #bg-image-desktop {
+        display: none;
+    }
+
+    #bg-image-mobile {
+        display: block;
+    }
+
+    #main {
+        flex-direction: column;
+    }
+
+    #card-form {
+        margin-top: 90px;
+        margin-bottom: 30px;
+        justify-content: center;
+    }
+
+    .card-image {
+        min-width: 270px;
+    }
+
+    #card-front {
+        top: 130px;
+        left: 20px;
+        z-index: 2;
+    }
+
+    #card-front p {
+        font-size: 12px;
+    }
+
+    #card-front #card-number {
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+
+    #card-back {
+        top: 40px;
+    }
+
+    #card-back-cvc {
+        font-size: 12px;
+    }
+
+    #thank-you-content {
+        margin-top: 90px;
+    }
+
+}
